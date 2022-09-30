@@ -1,0 +1,39 @@
+<%- include('partials/header')%>
+
+<div class="container">
+    <div>
+        <p><strong>User Name</strong>: <% user.userName %> </p>
+        <p><strong>Email</strong>: <% user.email %> </p>
+        <a href="/logout">Logout</a>
+    </div> 
+    <div class="addpost">
+        <h2>Add a post</h2>
+        <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+            <div>
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" name="title">
+            </div>
+            <div>
+                <label for="caption" class="form-label">Caption</label>
+                <textarea class="form-control" id="caption" name="caption"></textarea>
+            </div>
+            <div>
+                <label for="imgUpload" class="form-label">Image</label>
+                <input type="file" class="form-control" id="imageUpload" name="file">
+            </div>
+            <button type="submit" class="btn" value="Upload">Submit</button>
+        </form>
+        <div>
+            <ul class="postslisting">
+                <% for( let index = 0; index < posts.length; index++ ) { %>
+                    <li class="postlisting">
+                        <a href="/post/<%= posts[index]._id %>">
+                        <img class="selfpostedimg" src="<% posts[index].image %>">
+                        </a>
+                        
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+<div class="container">
+    <div>
+        <ul>
+            <% for( let index = 0; index < posts.length.posts; index++ ) { %>
+                <li class="feedlist">
+                    <a href="/post/<%= posts[index]._id %>">
+                        <img class="feedimage" src="<%= posts.image%>">
+                    </a>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+</div> 

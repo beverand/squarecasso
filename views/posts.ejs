@@ -1,0 +1,44 @@
+<% include('partials/header') %>
+<div class="container">
+    <div>
+        <h2><%= post.title %> </h2>
+        <img class="img" src="<%= post.image %>"/>
+        <div>
+            <form action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
+               <button class="btn" type="submit">heart</button>
+
+            </form>
+            <h3>Likes: <%= post.likes %></h3>
+            <% if(post.user == user.id){ %>
+
+                <form action="/post/deletePost/<%= post.id %>?_method=DELETE" method="POST">
+                    <button class="btn" type="submit"></button>
+                </form>
+            <%}%>
+            <div>
+                <p><%= post.caption  %> </p>
+            </div>
+            <div>
+                <h2>Add a comment</h2>           
+                <form action="/comment/createComment/<%= post._id %>" method="post">
+                    <div>
+                        <label for="title" class="form-label">Comment</label>
+                        <input type="text" class="form-control" id="comment" name="comment">
+                    </div>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+                <ul>
+                    <% for( let index = 0; index < comments.length; index++ ) { %>
+                    <li class="commentlist">
+                        <% comments[index].comment %> 
+                    </li>
+                    <% } %>
+                </ul>
+                <div>
+                    <a class="btn" href="/profile">Return to profile</a>
+                    <a class="btn" href="/feed">Return to feed</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

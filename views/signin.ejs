@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/header') %>
+</head>
+<body>
+    <header></header>
+     <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+-->
+<div id="login" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Login</h3>
+      <form action="/signin" method="POST">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email">
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password">
+      <!-- <input type="checkbox" name="remember" id="remember"> -->
+      <!-- <label for="remember">Remember me?</label> -->
+      <button type="submit" id="loginbtn">Login</button>
+      <label for="login"><a href='#'>Forgot password</a></label>
+      <h2><span class="line-center">or</span></h2>
+      <section class='social'>
+        <img src="/images/google_icon.svg" alt="">
+        <img src="/images/linkedin_icon.svg" alt="">
+        <!-- <img src="/images/tiktok_logo.svg" alt=""> -->
+        <img src="/images/294709_circle_twitter_icon.svg" alt="">
+      </section>
+      <h2><span class="line-center">or</span></h2>
+      <a href="/signup" id="signup">Did you want to sign up?</a>
+      <h2><span class="line-center">or</span></h2>
+      <p>Head back to <a href="/">squarecasso.</a></p>
+    </form>
+    </div>
+  
+  </div>
+
+
+    <script type="text/javascript" src="/javascripts/bling.js"></script>
+    <!-- <script type="text/javascript" src="blingdraw.js"></script> -->
+    <footer></footer>
+</body>
+</html>
