@@ -7,14 +7,12 @@ const {ensureAuth, ensureGuest} = require("../middleware/auth")
 /* GET home page. */
 router.get('/', mainController.getIndex);
 
-router.get('/signup', authController.getSignup);
+router.get('/signup', mainController.getSignup);
 router.post('/signup', authController.postSignup);
 
-router.get('/signin', authController.getLogin);
+router.get('/signin', mainController.getSignin);
 router.post('/signin', authController.postLogin);
 
-router.get('/help', function(req, res, next) {
-  res.render('help', { title: 'Squarecasso' });
-});
+router.get('/help', mainController.getHelp);
 
 module.exports = router;
