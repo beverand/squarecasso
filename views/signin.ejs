@@ -7,6 +7,13 @@
     <header></header>
      <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 -->
+<section class="col-6 mt-5">
+  <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
+  <div class="alert alert-danger"><%= el.msg %></div>
+  <% }) %> <% } %> <% if (locals.messages.info) { %> <%
+  messages.info.forEach( el => { %>
+  <div class="alert alert-info"><%= el.msg %></div>
+  <% }) %> <% } %>
 <div id="login" class="modal">
 
     <!-- Modal content -->
@@ -37,10 +44,6 @@
     </div>
   
   </div>
-
-
-    <!-- <script type="text/javascript" src="/javascripts/bling.js"></script> -->
-    <!-- <script type="text/javascript" src="blingdraw.js"></script> -->
     <footer></footer>
 </body>
 </html>
