@@ -96,23 +96,23 @@ canvas{
 }
 
 .ctrl > a{
-  /* display: inline-block; */
+  display: inline-block;
   padding: 2%;
   text-decoration: none;
   border: 1px solid orange;
-  width: 4%;
+  /* width: 4%; */
   border-radius: 20%;
   background-color: orange;
   color: black;
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: bold;
   text-align: center;
-  margin: 0 auto;
+  margin: 1% 1%; 
   
 }
 
 .ctrl{
-  grid-area: 4 / 1 / 4 / 4;
+  grid-area: 4 / 1 / 5 / 5;
   padding-top: 10px;
 }
 
