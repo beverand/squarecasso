@@ -210,3 +210,7 @@ h2:after{
   border-top:solid 1px red;
   z-index:-1;
 }
+
+#goto{
+  color:rgb(128, 0, 128)
+}
