@@ -7,13 +7,14 @@
     <header></header>
      <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 -->
-<section class="col-6 mt-5">
+<section class="signinerr">
   <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
   <div class="alert alert-danger"><%= el.msg %></div>
   <% }) %> <% } %> <% if (locals.messages.info) { %> <%
   messages.info.forEach( el => { %>
   <div class="alert alert-info"><%= el.msg %></div>
   <% }) %> <% } %>
+</section>
 <div id="login" class="modal">
 
     <!-- Modal content -->
@@ -22,9 +23,9 @@
       <h3>Login</h3>
       <form action="/signin" method="POST">
       <label for="email">Email</label>
-      <input type="email" name="email" id="email">
+      <input type="email" name="email" id="email" autocomplete="email">
       <label for="password">Password</label>
-      <input type="password" name="password" id="password">
+      <input type="password" name="password" id="password" autocomplete="current-password">
       <!-- <input type="checkbox" name="remember" id="remember"> -->
       <!-- <label for="remember">Remember me?</label> -->
       <button type="submit" id="loginbtn">Login</button>
