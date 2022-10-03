@@ -6,7 +6,8 @@ const UserSchema = new mongoose.Schema({
     email: {type: String},
     password: String,
     userType: { type: String, default: 'Basic' }
-});
+ },
+    {timestamps: true}     );
 
 UserSchema.pre("save", function save(next) {
     const user = this;
