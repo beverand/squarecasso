@@ -6,8 +6,17 @@
     <!-- <link rel="icon" type="image/png" href="http://www.mozilla.org/favicon.ico"/> -->
   </head>
   <body>
-    
+    <% if (title) {%>
+        <div class="loginFlag"><% title %></div>
+    <%}%>
     <!-- <p>Welcome to <%= title %></p> -->
+    <nav>
+      <ul>
+        <li><a href="/signin" id="signin">signin</a></li>
+        <li><a href="/signup" id="signup">signup</a></li>
+        <li><a href="/logout" id="logout">logout</a></li>
+      </ul>    
+    </nav>      
     <section class="gembox">     
       <section class="big free" id="free">0</section>                
       <section class="small free" id="gem1">0</section>
@@ -23,9 +32,7 @@
           <a href="/save" id="savebtn">save</a>
           <a href="#" id="postbtn">post</a>
           <a href="/help" id="help">?</a>
-          <a href="/signin" id="signin">signin</a>
-          <a href="/signup" id="signup">signup</a>
-          <a href="/logout" id="logout">logout</a>
+          
           <button id="myBtn"><% title %></button>
       </section>
   </section>
